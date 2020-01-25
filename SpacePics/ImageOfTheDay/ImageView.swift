@@ -26,7 +26,7 @@ struct ImageView: View {
     }
     .navigationBarTitle(Text("\(imageOfTheDay.title)"))
     .onAppear {
-      self.imageOfTheDay.downloadImageSD { sdImage in
+      self.imageOfTheDay.downloadImage(hd: false) { sdImage in
         self.imageDownloaded = true
         self.image = sdImage
       }
