@@ -7,8 +7,12 @@
 //
 
 import SwiftUI
+import UIKit
+import SwiftUISpinner
 
 struct ContentView: View {
+  
+  @State var spinnerAnimating: Bool = true
   
   @State var imageOfTheDay: ImageOfTheDay?
   @State var loadedImage: Bool = false
@@ -25,7 +29,10 @@ struct ContentView: View {
           }
         }
         if loadedImage == false {
-          Text("Loading...")
+          VStack {
+            SwiftUISpinner(animating: true)
+            Text("Loading...")
+          }
         } else {
           Text("Loaded")
           Button(action: {

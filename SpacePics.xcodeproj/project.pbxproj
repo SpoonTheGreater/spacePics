@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		B45E533523DC85A600B201D6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45E533423DC85A600B201D6 /* Preview Assets.xcassets */; };
 		B45E533823DC85A600B201D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B45E533623DC85A600B201D6 /* LaunchScreen.storyboard */; };
 		B45E534123DC8D8B00B201D6 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45E534023DC8D8B00B201D6 /* ImageView.swift */; };
+		B472F12F23DCAA8200332F90 /* SwiftUISpinner in Frameworks */ = {isa = PBXBuildFile; productRef = B472F12E23DCAA8200332F90 /* SwiftUISpinner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B472F12F23DCAA8200332F90 /* SwiftUISpinner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,8 +64,8 @@
 		B45E532A23DC85A400B201D6 /* SpacePics */ = {
 			isa = PBXGroup;
 			children = (
-				B43827BD23DC98C900466D72 /* NASAServices.swift */,
 				B45E533F23DC85BC00B201D6 /* ImageOfTheDay */,
+				B43827BD23DC98C900466D72 /* NASAServices.swift */,
 				B45E532B23DC85A400B201D6 /* AppDelegate.swift */,
 				B45E532D23DC85A400B201D6 /* SceneDelegate.swift */,
 				B45E532F23DC85A400B201D6 /* ContentView.swift */,
@@ -108,6 +110,9 @@
 			dependencies = (
 			);
 			name = SpacePics;
+			packageProductDependencies = (
+				B472F12E23DCAA8200332F90 /* SwiftUISpinner */,
+			);
 			productName = SpacePics;
 			productReference = B45E532823DC85A400B201D6 /* SpacePics.app */;
 			productType = "com.apple.product-type.application";
@@ -136,6 +141,9 @@
 				Base,
 			);
 			mainGroup = B45E531F23DC85A400B201D6;
+			packageReferences = (
+				B472F12D23DCAA8200332F90 /* XCRemoteSwiftPackageReference "SwiftUISpinner" */,
+			);
 			productRefGroup = B45E532923DC85A400B201D6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -362,6 +370,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B472F12D23DCAA8200332F90 /* XCRemoteSwiftPackageReference "SwiftUISpinner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SpoonTheGreater/SwiftUISpinner.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B472F12E23DCAA8200332F90 /* SwiftUISpinner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B472F12D23DCAA8200332F90 /* XCRemoteSwiftPackageReference "SwiftUISpinner" */;
+			productName = SwiftUISpinner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B45E532023DC85A400B201D6 /* Project object */;
 }

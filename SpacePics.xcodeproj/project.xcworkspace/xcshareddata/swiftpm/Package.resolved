@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SwiftUISpinner",
+        "repositoryURL": "https://github.com/SpoonTheGreater/SwiftUISpinner.git",
+        "state": {
+          "branch": null,
+          "revision": "3a7a4b7fafd350c26a6c85560374011583066281",
+          "version": "0.0.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
