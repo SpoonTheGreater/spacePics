@@ -67,7 +67,7 @@ struct ContentView_Previews: PreviewProvider {
 
 public class NASAImage {
   
-  private static let TEST_API_KEY = "aQnDa5JJC5BmREtEhoYDb84Z9wA4yN2f38fz1vB5"
+  private static let TEST_API_KEY = "DEMO_KEY"
   
   public static let requestString = "https://api.nasa.gov/planetary/apod?api_key=\(NASAImage.TEST_API_KEY)"
   
@@ -149,7 +149,7 @@ public class ImageOfTheDay: Decodable {
     self.hdurl = "https://apod.nasa.gov/apod/image/2001/RubinsGalaxy_hst2000.jpg"
     self.media_type = "image"
     self.service_version = "v1"
-    self.title = "Rubin's Galaxy"œ
+    self.title = "Rubin's Galaxy"
     self.url = "https://apod.nasa.gov/apod/image/2001/RubinsGalaxy_hst1024.jpg"
   }
   
