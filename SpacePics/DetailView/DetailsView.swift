@@ -1,5 +1,5 @@
 //
-//  ImageView.swift
+//  DetailsView.swift
 //  SpacePics
 //
 //  Created by James Sadlier on 25/01/2020.
@@ -9,7 +9,7 @@
 import SwiftUI
 import SwiftUISpinner
 
-struct ImageView: View {
+struct DetailsView: View {
   
   var imageOfTheDay: ImageOfTheDay
   
@@ -52,25 +52,33 @@ func imageView(uiImage: UIImage?, imageDownloaded: Bool) -> AnyView {
   })
 }
 
-struct ImageView_Previews: PreviewProvider {
+struct DetailsView_Previews: PreviewProvider {
   
   static var previews: some View {
     Group {
-      NavigationView {
-        ImageView(imageOfTheDay: ImageOfTheDay.debugPreview())
+      ForEach(ColorScheme.allCases, id: \.self) { colorScheme in
+        NavigationView {
+          DetailsView(imageOfTheDay: ImageOfTheDay.debugPreview())
+        }.environment(\.colorScheme, colorScheme)
       }
-        .previewDevice(PreviewDevice(rawValue: " 11 Pro Max"))
-        .previewDisplayName("11 Pro Max")
-//        .environment(\.colorScheme, .dark)
-        //.previewLayout(.fixed(width: 2436, height: 1125))
-//        .previewLayout(.fixed(width: 812, height: 375))
       
-      NavigationView {
-        ImageView(imageOfTheDay: ImageOfTheDay.debugPreview())
-      }
-        .previewDevice(PreviewDevice(rawValue: "iPad mini (5th generation)"))
-        .previewDisplayName("iPad mini (5th generation)")
-//        .environment(\.colorScheme, .dark)
+//        .previewDevice(PreviewDevice(rawValue: " 11 Pro Max"))
+//        .previewDisplayName("11 Pro Max")
+//       .environment(\.sizeCategory, .accessibilityExtraLarge)
+////        .environment(\.colorScheme, .dark)
+////        .previewLayout(.fixed(width: 812, height: 375))
+//
+//      NavigationView {
+//        DetailsView(imageOfTheDay: ImageOfTheDay.debugPreview())
+//      }
+//        .previewDevice(PreviewDevice(rawValue: " 11 Pro Max"))
+//        .previewDisplayName("11 Pro Max")
+////        .environment(\.colorScheme, .dark)
+//
+//      NavigationView {
+//              DetailsView(imageOfTheDay: ImageOfTheDay.debugPreview())
+//            }
+//              .previewDevice("iPhone SE")
     }
   }
 }

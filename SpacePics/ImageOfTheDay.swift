@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public class ImageOfTheDay: Decodable {
+public class ImageOfTheDay: Decodable, Identifiable {
   
   enum CodingKeys: String, CodingKey {
     case date
@@ -19,6 +19,7 @@ public class ImageOfTheDay: Decodable {
     case service_version
     case title
     case url
+    case imageName
   }
   
   public var date: Date
@@ -28,6 +29,12 @@ public class ImageOfTheDay: Decodable {
   public var service_version: String
   public var title: String
   public var url: String
+  public var imageName: String
+  
+  public var id: String {
+    return self.dateString()
+  }
+  
   
   required public init(from decoder: Decoder) throws {
     let values = try decoder.container(keyedBy: CodingKeys.self)
@@ -38,6 +45,7 @@ public class ImageOfTheDay: Decodable {
     self.service_version = try values.decode(String.self, forKey: .service_version)
     self.title = try values.decode(String.self, forKey: .title)
     self.url = try values.decode(String.self, forKey: .url)
+    self.imageName = try values.decode(String.self, forKey: .imageName)
     
     if let dateString = try? values.decode(String.self, forKey: .date),
       let date = DateFormatter.NASADate.date(from: dateString) {
@@ -55,11 +63,16 @@ public class ImageOfTheDay: Decodable {
     self.service_version = "v1"
     self.title = "Rubin's Galaxy"
     self.url = "https://apod.nasa.gov/apod/image/2001/RubinsGalaxy_hst1024.jpg"
+    self.imageName = "RubinsGalaxy_hst1024.jpg"
   }
   
   public static func debugPreview() -> ImageOfTheDay {
     let preview = ImageOfTheDay()
     return preview
+  }
+  
+  public func dateString() -> String {
+    return DateFormatter.NASADate.string(from: self.date)
   }
   
   public func downloadImage( hd: Bool = false, completion: @escaping (UIImage?) -> Void) {
@@ -68,6 +81,7 @@ public class ImageOfTheDay: Decodable {
       completion(nil)
       return
     }
+    
     var request = URLRequest(url: requestURL)
     request.httpMethod = "GET"
     let session = URLSession.shared

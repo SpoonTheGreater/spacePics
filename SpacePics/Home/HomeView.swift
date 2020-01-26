@@ -17,14 +17,14 @@ struct HomeView: View {
   @State var imageOfTheDay: ImageOfTheDay?
   @State var loadedImage: Bool = false
   
-  @State var imageView: AnyView = AnyView(EmptyView())
+  @State var detailsView: AnyView = AnyView(EmptyView())
   @State var showingImageDetails: Bool = false
   
   var body: some View {
     NavigationView {
       VStack {
         Group {
-          NavigationLink(destination: imageView, isActive: self.$showingImageDetails) {
+          NavigationLink(destination: detailsView, isActive: self.$showingImageDetails) {
             EmptyView()
           }
         }
@@ -36,7 +36,7 @@ struct HomeView: View {
         } else {
           Text("Loaded")
           Button(action: {
-            self.imageView = self.generateImageView(imageOfTheDay: self.imageOfTheDay)
+            self.detailsView = self.generateImageView(imageOfTheDay: self.imageOfTheDay)
             self.showingImageDetails = true
           }) {
             Text("View \(imageOfTheDay?.title ?? "image")")
@@ -58,7 +58,7 @@ struct HomeView: View {
   
   func generateImageView(imageOfTheDay: ImageOfTheDay?) -> AnyView {
     if let iotd = imageOfTheDay {
-      return AnyView(ImageView(imageOfTheDay: iotd))
+      return AnyView(DetailsView(imageOfTheDay: iotd))
     }
     return AnyView(EmptyView())
   }

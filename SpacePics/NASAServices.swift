@@ -10,7 +10,7 @@ import Foundation
 
 public class NASAServices {
   
-  private static let TEST_API_KEY = "DEMO_KEY"
+  private static let TEST_API_KEY = "aQnDa5JJC5BmREtEhoYDb84Z9wA4yN2f38fz1vB5"
   
   public static let requestString = "https://api.nasa.gov/planetary/apod?api_key=\(NASAServices.TEST_API_KEY)"
   
@@ -50,7 +50,7 @@ public class NASAServices {
   }
 }
 
-extension DateFormatter {
+public extension DateFormatter {
   static let NASADate: DateFormatter = {
     let formatter = DateFormatter()
     formatter.locale = Locale(identifier: "en_US_POSIX") // Locale.current//
