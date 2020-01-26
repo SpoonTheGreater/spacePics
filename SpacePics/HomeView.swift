@@ -10,7 +10,7 @@ import SwiftUI
 import UIKit
 import SwiftUISpinner
 
-struct ContentView: View {
+struct HomeView: View {
   
   @State var spinnerAnimating: Bool = true
   
@@ -66,7 +66,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView(imageOfTheDay: nil)
+    HomeView(imageOfTheDay: nil)
   }
 }
 

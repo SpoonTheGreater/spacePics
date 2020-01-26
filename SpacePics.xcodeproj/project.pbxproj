@@ -11,7 +11,7 @@
 		B43827BE23DC98C900466D72 /* NASAServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43827BD23DC98C900466D72 /* NASAServices.swift */; };
 		B45E532C23DC85A400B201D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45E532B23DC85A400B201D6 /* AppDelegate.swift */; };
 		B45E532E23DC85A400B201D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45E532D23DC85A400B201D6 /* SceneDelegate.swift */; };
-		B45E533023DC85A400B201D6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45E532F23DC85A400B201D6 /* ContentView.swift */; };
+		B45E533023DC85A400B201D6 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45E532F23DC85A400B201D6 /* HomeView.swift */; };
 		B45E533223DC85A600B201D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45E533123DC85A600B201D6 /* Assets.xcassets */; };
 		B45E533523DC85A600B201D6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B45E533423DC85A600B201D6 /* Preview Assets.xcassets */; };
 		B45E533823DC85A600B201D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B45E533623DC85A600B201D6 /* LaunchScreen.storyboard */; };
@@ -25,7 +25,7 @@
 		B45E532823DC85A400B201D6 /* SpacePics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpacePics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45E532B23DC85A400B201D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B45E532D23DC85A400B201D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B45E532F23DC85A400B201D6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B45E532F23DC85A400B201D6 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B45E533123DC85A600B201D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B45E533423DC85A600B201D6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B45E533723DC85A600B201D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 				B43827BD23DC98C900466D72 /* NASAServices.swift */,
 				B45E532B23DC85A400B201D6 /* AppDelegate.swift */,
 				B45E532D23DC85A400B201D6 /* SceneDelegate.swift */,
-				B45E532F23DC85A400B201D6 /* ContentView.swift */,
+				B45E532F23DC85A400B201D6 /* HomeView.swift */,
 				B45E533123DC85A600B201D6 /* Assets.xcassets */,
 				B45E533623DC85A600B201D6 /* LaunchScreen.storyboard */,
 				B45E533923DC85A600B201D6 /* Info.plist */,
@@ -176,7 +176,7 @@
 				B45E532C23DC85A400B201D6 /* AppDelegate.swift in Sources */,
 				B45E532E23DC85A400B201D6 /* SceneDelegate.swift in Sources */,
 				B43827BE23DC98C900466D72 /* NASAServices.swift in Sources */,
-				B45E533023DC85A400B201D6 /* ContentView.swift in Sources */,
+				B45E533023DC85A400B201D6 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
