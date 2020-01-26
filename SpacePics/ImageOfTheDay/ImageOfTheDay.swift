@@ -62,7 +62,7 @@ public class ImageOfTheDay: Decodable {
     return preview
   }
   
-  public func downloadImage( hd: Bool = true, completion: @escaping (UIImage?) -> Void) {
+  public func downloadImage( hd: Bool = false, completion: @escaping (UIImage?) -> Void) {
     guard let requestURL = URL(string: hd ? self.hdurl : self.url) else {
       print("Error creating requestURL")
       completion(nil)
