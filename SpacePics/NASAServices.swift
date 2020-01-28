@@ -10,7 +10,7 @@ import Foundation
 
 public class NASAServices {
   
-  private static let TEST_API_KEY = "aQnDa5JJC5BmREtEhoYDb84Z9wA4yN2f38fz1vB5"
+  private static let TEST_API_KEY = "DEMO_KEY"
   
   public static let requestString = "https://api.nasa.gov/planetary/apod?api_key=\(NASAServices.TEST_API_KEY)"
   
